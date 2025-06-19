@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Trayectoria en videojuegos de Joaquín Gandini."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/favicon.ico" />
+    <title>Videojuegos - Joaquín Gandini</title>
+  </head>
+  <body>
+    <!-- <header class="MiCara">
+      <img src="assets/mi-cara.jpg" alt="Mi Rostro" />
+    </header> -->
+
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">Joaquín Gandini</a>
+        <ul class="nav-links">
+          <li><a href="index.html#estudios">Estudios</a></li>
+          <li><a href="index.html#habilidades">Habilidades</a></li>
+          <!-- <li><a href="videojuego.html">Videojuegos</a></li>
+          <li><a href="aplicacion.html">App Supabase</a></li> -->
+          <li><a href="index.html#aspiraciones">Aspiraciones</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section class="Titulo">
+        <h1>Videojuegos y Trayectoria</h1>
+        <p>
+          Desde 2022 he estado trabajando y formándome en el desarrollo de
+          videojuegos.
+        </p>
+        <p>
+          Me especializo en JavaScript y el framework Phaser, con los que he
+          creado prototipos y juegos funcionales.
+        </p>
+      </section>
+
+      <section>
+        <h2>Proyecto destacado: Juego Phaser 2024 - <em>"KidKorn"</em></h2>
+        <p>
+          Este proyecto fue desarrollado en equipo junto a:
+          <a target="_blank" href="https://github.com/Truck201"
+            >Joaquín Gandini</a
+          >
+          (programación),
+          <a target="_blank" href="https://github.com/syngo-rgb"
+            >Carolina Rosso</a
+          >
+          (arte), y
+          <a target="_blank" href="https://github.com/SebillaSan"
+            >Sebastián Moreira</a
+          >
+          (diseño sonoro).
+        </p>
+        <p>
+          Desde el comienzo, en marzo de 2024, trabajamos en una propuesta
+          creativa que uniera videojuegos con el mundo del cine, tomando
+          referencias visuales y mecánicas inspiradas en películas y estilos
+          clásicos en pixel art.
+        </p>
+
+        <p>
+          El desarrollo fue un gran desafío para nosotros, no solo en lo
+          técnico, sino también por todo el esfuerzo de organización,
+          creatividad y colaboración que implicó. Ver cómo nuestro juego tomaba
+          forma fue una experiencia muy enriquecedora, tanto a nivel personal
+          como profesional.
+        </p>
+
+        <p>
+          Tuvimos la oportunidad de presentarlo en Santa Fe, en una convocatoria
+          regional de videojuegos. La recepción del público fue muy cálida y
+          positiva, lo que nos llenó de motivación y orgullo. También
+          participamos en charlas sobre desarrollo, donde compartimos nuestras
+          ideas y escuchamos experiencias de otros creadores.
+        </p>
+
+        <p>
+          Hoy seguimos trabajando para mejorar <em>KidKorn</em> y llevarlo a una
+          plataforma pública donde más personas puedan jugarlo. Esta experiencia
+          marcó un antes y un después en nuestro camino como desarrolladores.
+        </p>
+
+        <a target="_blank" href="https://pochoclo-games-v10.netlify.app/"
+          >Link al Juego</a
+        >
+
+        <section class="aparecer">
+          <h2>Galería del proyecto</h2>
+          <div class="img-row">
+            <img src="assets/juego1.jpg" alt="Captura del juego 1" />
+            <img src="assets/juego2.jpg" alt="Captura del juego 2" />
+          </div>
+        </section>
+
+        <p><a href="index.html#proyectos">← Volver</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Joaquín Gandini</p>
+    </footer>
+  </body>
+</html>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("aparecer");
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  document.querySelectorAll("section, article").forEach((el) => {
+    observer.observe(el);
+  });
+</script>

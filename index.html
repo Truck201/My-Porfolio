@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de Joaquín Gandini, programador de videojuegos y desarrollador web."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Porfolio Joaquín Gandini</title>
+  </head>
+
+  <body>
+    <header class="MiCara">
+      <img src="assets/mi-cara.jpg" alt="Mi Rostro" />
+    </header>
+
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">Joaquín Gandini</a>
+        <ul class="nav-links">
+          <li><a href="index.html#estudios">Estudios</a></li>
+          <li><a href="index.html#habilidades">Habilidades</a></li>
+          <!-- <li><a href="videojuego.html">Videojuegos</a></li>
+          <li><a href="aplicacion.html">App Supabase</a></li> -->
+          <li><a href="index.html#aspiraciones">Aspiraciones</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section class="Titulo">
+        <h1>Hola, bienvenidos a mi porfolio personal</h1>
+        <p>
+          Soy Joaquín Gandini, tengo 23 años y estudio en la Universidad de
+          Rafaela.
+        </p>
+        <p>
+          Programador de videojuegos, desarrollador de aplicaciones y sitios
+          web.
+        </p>
+        <p>
+          Soy una persona proactiva, organizada y responsable, con buenas
+          relaciones interpersonales y gran trabajo en equipo orientado a
+          resultados.
+        </p>
+        <p>
+          Tengo experiencia en:
+          <strong>JavaScript</strong>, <strong>C#</strong>,
+          <strong>Node.js</strong>
+        </p>
+        <div class="iconos-tecnologias">
+          <img src="assets/js.png" alt="JavaScript" />
+          <img src="assets/csharp.png" alt="C#" />
+          <img src="assets/node.png" alt="Node.js" />
+        </div>
+      </section>
+
+      <!-- <nav class="navegacion">
+        <a href="#estudios">Estudios</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#aspiraciones">Aspiraciones</a>
+      </nav> -->
+
+      <section id="estudios">
+        <h2>Estudios</h2>
+        <p>
+          <strong>Secundario:</strong> Técnico Químico, Escuela Técnica EETP
+          N°455 Esperanza — Finalizado.
+        </p>
+        <p>
+          <strong>Universidad:</strong> Productor de Videojuegos y
+          Entretenimiento Digital en la UNRaf — Cursando 3er año.
+        </p>
+        <p>
+          <strong>Cursos:</strong> Administración de Pymes y manejo de Excel (6
+          meses) — Finalizado.
+        </p>
+      </section>
+
+      <section id="habilidades">
+        <h2>Habilidades</h2>
+        <ul>
+          <li>Programación orientada a objetos</li>
+          <li>Desarrollo con JavaScript, Node.js y C#</li>
+          <li>Uso de frameworks como Phaser y Electron</li>
+          <li>Trabajo en equipo, responsabilidad y liderazgo</li>
+        </ul>
+      </section>
+
+      <section id="proyectos">
+        <h2>Proyectos</h2>
+
+        <article>
+          <h3>Videojuego con Phaser (2024)</h3>
+          <p>
+            En un equipo de 3 personas desarrollamos un videojuego utilizando
+            solo HTML y JavaScript con el framework Phaser.
+          </p>
+          <p>
+            Lo presentamos junto con la universidad en una convocatoria de
+            juegos del Litoral en Santa Fe.
+          </p>
+          <a href="./videojuego.html">Ver más</a>
+        </article>
+
+        <article>
+          <h3>Aplicación de gestión con Supabase (2025)</h3>
+          <p>
+            Desarrollé una aplicación conectada a una base de datos Supabase
+            para la gestión de productos de un local comercial.
+          </p>
+          <p>Usé Electron para distribuirla como aplicación de escritorio.</p>
+          <a href="./aplicacion.html">Ver más</a>
+        </article>
+      </section>
+
+      <section id="aspiraciones">
+        <h2>Aspiraciones</h2>
+        <p>
+          Quiero seguir desarrollando aplicaciones que mejoren procesos y
+          gestión de información.
+        </p>
+        <p>
+          Estoy capacitándome constantemente para adquirir habilidades en todas
+          las áreas necesarias para el desarrollo de productos digitales
+          completos.
+        </p>
+      </section>
+    </main>
+    <br />
+    <br />
+    <hr />
+
+    <footer>
+      <br />
+      <span>© 2025 Joaquín Gandini — Portfolio personal</span>
+      <p>Contacto: +54 3496 449978</p>
+      <p>joaquingandini22@gmail.com</p>
+
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/in/joaquin-gandini-650497270/"
+        >Linkedin</a
+      >
+    </footer>
+  </body>
+</html>
+
+<script>
+  // Detectar si un elemento entra en el viewport
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("aparecer");
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  // Aplicar a secciones y artículos
+  document.querySelectorAll("section, article").forEach((el) => {
+    observer.observe(el);
+  });
+</script>

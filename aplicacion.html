@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Proyecto de aplicación con Supabase de Joaquín Gandini."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/favicon.ico" />
+    <title>App Supabase - Joaquín Gandini</title>
+  </head>
+  <body>
+    <!-- <header class="MiCara">
+      <img src="assets/mi-cara.jpg" alt="Mi Rostro" />
+    </header> -->
+
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">Joaquín Gandini</a>
+        <ul class="nav-links">
+          <li><a href="index.html#estudios">Estudios</a></li>
+          <li><a href="index.html#habilidades">Habilidades</a></li>
+          <!-- <li><a href="videojuego.html">Videojuegos</a></li>
+          <li><a href="aplicacion.html">App Supabase</a></li> -->
+          <li><a href="index.html#aspiraciones">Aspiraciones</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section class="Titulo">
+        <h1>Aplicación con Supabase</h1>
+        <p>
+          Esta aplicación fue diseñada para un comercio local, con una base de
+          datos Supabase conectada en tiempo real.
+        </p>
+        <p>
+          Utilicé Electron para que funcionara como una app de escritorio
+          accesible y portable.
+        </p>
+        <p>
+          Fue mi más reciente proyecto que elaboré en poco tiempo y su utilidad
+          en el negocio es para registrar los movimiento de entrada y salida de
+          productos. Almacenar las boletas y descargarlas en archivos pdf todas
+          las ventas asignadas a un empleado.
+        </p>
+
+        <p>
+          Desarrollé tanto el backend para la petición de información en
+          supabase, la actualización y modificación de datos, como el front para
+          que sea utilizado por el usuario, el empleador y agregar productos
+          cargando el código de barras.
+        </p>
+
+        <p>Utilizé vite, node.js.</p>
+      </section>
+
+      <section>
+        <h2>Características técnicas</h2>
+        <ul>
+          <li>CRUD completo de productos</li>
+          <li>Autenticación de usuarios</li>
+          <li>Distribución multiplataforma con Electron</li>
+        </ul>
+
+        <section class="aparecer">
+          <h2>Galería del proyecto</h2>
+          <div class="img-row">
+            <img src="assets/juego1.jpg" alt="Captura del juego 1" />
+            <img src="assets/juego2.jpg" alt="Captura del juego 2" />
+            <img src="assets/juego2.jpg" alt="Captura del juego 2" />
+          </div>
+        </section>
+
+        <a target="_blank" href="">Link repositorio GitHub</a>
+        <br />
+        <br />
+        <p><a href="index.html#proyectos">← Volver</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Joaquín Gandini</p>
+    </footer>
+  </body>
+</html>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("aparecer");
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  document.querySelectorAll("section, article").forEach((el) => {
+    observer.observe(el);
+  });
+</script>
