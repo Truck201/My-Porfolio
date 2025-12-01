@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Joaquín A. Gandini — Game Producer and Developer."
+    />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="icon" href="../../assets/icons/favicon.ico" />
+    <title>Joaquín A. Gandini — Portfolio</title>
+  </head>
+
+  <body>
+    <header class="MiCara">
+      <img
+        src="../../assets/icons/JoaquinGandini.jpg"
+        alt="Photo of Joaquin A. Gandini"
+      />
+    </header>
+
+    <nav class="navbar">
+      <div class="nav-container">
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/joaquin-gandini-650497270/"
+          rel="noopener"
+          class="logo"
+          >Joaquín A. Gandini</a
+        >
+        <ul class="nav-links">
+          <li><a href="#studies">Studies</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#knowledge">Knowledge</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+        <br />
+        <div class="language-switcher">
+          <a href="../../index.html">ES</a> | <strong>EN</strong>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="Titulo">
+        <h1>Hello, Welcome!</h1>
+
+        <p>
+          I am <strong>Joaquín Alejandro Gandini</strong>, a game developer and
+          producer from <strong>Santa Fe, Argentina</strong>. I am 23 years old
+          and currently studying at the
+          <a target="_blank" href="https://www.unraf.edu.ar/" rel="noopener"
+            >National University of Rafaela (UNRaf)</a
+          >, specializing in video game production and development.
+        </p>
+
+        <p>
+          I work as a <strong>developer</strong>, <strong>producer</strong>, and
+          <strong>designer</strong> of the game
+          <a href="./hit-the-corn-game.html">Hit The Corn!</a>.
+        </p>
+
+        <p>
+          I consider myself a proactive, organized, and responsible person who
+          enjoys working in teams and focusing on achieving results. I am
+          passionate about creative programming, prototyping, and production
+          workflows dedicated to delivering high-quality game experiences.
+        </p>
+
+        <p>
+          I am currently improving my skills in UI/UX for video games and
+          efficient gameplay programming in Unity.
+        </p>
+      </section>
+
+      <section id="studies">
+        <h2>Studies</h2>
+        <p>
+          <strong>University</strong><br />
+          Bachelor’s Degree in Video Game Production — UNRaf (2023–Present)
+        </p>
+        <p>
+          <strong>High School</strong><br />
+          Chemical Technician — EETP N°455 Esperanza, Santa Fe (2014–2020)
+        </p>
+        <p>
+          <strong>Courses</strong><br />
+          SME Management & Excel — UCOES (2022)
+        </p>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li><strong>Programming:</strong> C#, Unity, Phaser 3</li>
+          <li><strong>Cloud & Databases:</strong> Firebase</li>
+          <li><strong>Version Control:</strong> GitHub</li>
+          <li><strong>Deployment:</strong> Netlify</li>
+        </ul>
+      </section>
+
+      <section id="knowledge">
+        <h2>Knowledge</h2>
+        <ul>
+          <li>Video game design & prototyping</li>
+          <li>API integration & HTTP requests</li>
+          <li>Project organization</li>
+          <li>Team collaboration & communication</li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+
+        <article>
+          <h3>“Hit the Corn!” — Video Game (2024–Present)</h3>
+          <p>
+            Responsible for programming, development, and part of the production
+            process alongside my teammate Carolina Rosso.
+          </p>
+          <p>
+            Our goal is to publish a playable demo to seek funding and complete
+            the game at a professional level.
+          </p>
+          <a href="./videogameHitTheCorn.html">See more</a>
+        </article>
+
+        <article>
+          <h3>Management Application with Supabase (January 2025)</h3>
+          <p>
+            I developed a real-time product management application connected to
+            a Supabase database.
+          </p>
+          <p>
+            Packaged with Electron to distribute it as a desktop application.
+          </p>
+          <a href="./application.html">See more</a>
+        </article>
+      </section>
+    </main>
+
+    <br /><br />
+    <hr />
+
+    <footer>
+      <br />
+      <span>© 2025 Joaquín Gandini — Personal Portfolio</span>
+      <p>Contact: +54 3496 449978</p>
+      <p>joaquingandini22@gmail.com</p>
+
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/in/joaquin-gandini-650497270/"
+        rel="noopener"
+        >LinkedIn</a
+      >
+    </footer>
+  </body>
+</html>
+
+<script>
+  // Detect sections entering the viewport
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("aparecer");
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  document.querySelectorAll("section, article").forEach((el) => {
+    observer.observe(el);
+  });
+
+  // Language redirect only on first visit
+  document.querySelectorAll(".language-switcher a").forEach((link) => {
+    link.addEventListener("click", () => {
+      localStorage.setItem("lang-selected", "true");
+    });
+  });
+
+  (function () {
+    if (localStorage.getItem("lang-selected")) return;
+
+    const userLang = navigator.language || navigator.userLanguage;
+
+    if (userLang.startsWith("en")) {
+      window.location.href = "/lang/en/index.html";
+    }
+  })();
+</script>

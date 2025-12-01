@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Supabase-based application project by Joaquín Gandini."
+    />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="icon" href="assets/icons/favicon.ico" />
+    <title>Supabase App - Joaquín Gandini</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">Joaquín Gandini</a>
+        <!-- <ul class="nav-links">
+          <li><a href="index.html#estudios">Studies</a></li>
+          <li><a href="index.html#habilidades">Skills</a></li>
+          <li><a href="index.html#aspiraciones">Goals</a></li>
+        </ul> -->
+      </div>
+      <br />
+      <div class="language-switcher">
+        <a href="../../aplicacion.html">ES</a> |
+        <strong>EN</strong>
+      </div>
+    </nav>
+
+    <main>
+      <section class="Titulo">
+        <h1>Supabase Desktop Application</h1>
+
+        <p>
+          This application was developed for a local business, featuring a
+          real-time connected Supabase database.
+        </p>
+
+        <p>
+          I used Electron to package it as a desktop application, ensuring
+          accessibility, portability and ease of use.
+        </p>
+
+        <p>
+          The tool enables the business to track product inventory, register
+          incoming and outgoing stock, store receipts, and export sales assigned
+          to each employee as PDF files.
+        </p>
+
+        <p>
+          I developed both the backend logic—handling data requests, updates,
+          and database operations in Supabase—and the entire frontend interface
+          used by both employees and administrators, including barcode-based
+          product registration.
+        </p>
+
+        <p>Technologies used: Vite, Node.js, Electron, Supabase.</p>
+      </section>
+
+      <section>
+        <h2>Technical Features</h2>
+        <ul>
+          <li>Full product CRUD system</li>
+          <li>User authentication</li>
+          <li>Cross-platform distribution with Electron</li>
+        </ul>
+
+        <a target="_blank" href="">GitHub Repository</a>
+        <br /><br />
+
+        <p><a href="index.html#proyectos">← Back</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Joaquín Gandini</p>
+    </footer>
+  </body>
+</html>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("aparecer");
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  document.querySelectorAll("section, article").forEach((el) => {
+    observer.observe(el);
+  });
+</script>
