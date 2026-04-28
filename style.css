@@ -73,6 +73,14 @@ a:hover {
   box-shadow: var(--shadow);
 }
 
+.icon {
+  width: 42px !important;
+  height: 42px !important;
+  object-fit: contain;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
 .language-switcher {
   position: absolute;
   top: 15px;
@@ -226,7 +234,9 @@ article {
   padding: 1.5rem;
   margin-top: 1rem;
   box-shadow: var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 article:hover {
@@ -247,7 +257,7 @@ a::after {
   bottom: -4px;
   width: 0%;
   height: 2px;
-  background-color: var(--primary-color);
+  /* background-color: var(--primary-color); */
   transition: width 0.3s ease;
 }
 

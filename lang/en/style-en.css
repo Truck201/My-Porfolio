@@ -50,6 +50,21 @@ p {
   margin-bottom: 1rem;
 }
 
+section {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  margin: 1rem auto;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  max-width: 800px;
+}
+
+img {
+  width: 40px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
 /* --------------------------
    LINKS
 --------------------------- */
@@ -62,6 +77,26 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  /* background-color: var(--primary-color); */
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
 }
 
 /* --------------------------
@@ -210,7 +245,9 @@ article {
   padding: 1.5rem;
   margin-top: 1rem;
   box-shadow: var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 article:hover {
@@ -222,8 +259,7 @@ article:hover {
    UNIVERSAL ICON SIZE
 --------------------------- */
 
-section img,
-li img {
+.icon {
   width: 42px !important;
   height: 42px !important;
   object-fit: contain;
@@ -253,6 +289,25 @@ li img {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.img-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.img-row img {
+  width: 45%;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.img-row img:hover {
+  transform: scale(1.03);
 }
 
 /* --------------------------
@@ -344,10 +399,6 @@ footer {
 --------------------------- */
 
 @media (max-width: 768px) {
-  body {
-    padding: 1rem;
-  }
-
   .nav-links {
     flex-direction: column;
     align-items: flex-start;
@@ -364,9 +415,41 @@ footer {
     width: 150px;
     height: 150px;
   }
+
+  body {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  .Titulo,
+  section {
+    padding: 1rem;
+  }
+
+  .MiCara img {
+    width: 140px;
+    height: 140px;
+    background-image: url("assets/Icons/banner.jpg");
+  }
 }
 
 @media (max-width: 480px) {
+  .nav-links {
+    /* flex-direction: column; */
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
   .MiCara img {
     width: 130px;
     height: 130px;
