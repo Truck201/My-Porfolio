@@ -71,6 +71,12 @@ a:hover {
   object-fit: cover;
   border-radius: 50%;
   box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.MiCara img:hover {
+  transform: scale(1.1);
 }
 
 .icon {
